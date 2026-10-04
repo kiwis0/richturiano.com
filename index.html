@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Richie Turiano — Production AI & ML Engineer</title>
+<meta name="description" content="Software engineer with 5+ years building LLM systems, agentic pipelines, and ML infrastructure at scale. Previously Cisco Talos. Based in FL.">
+<link rel="canonical" href="https://richturiano.com/">
+<meta property="og:title" content="Richie Turiano — Production AI & ML Engineer">
+<meta property="og:description" content="Software engineer with 5+ years building LLM systems, agentic pipelines, and ML infrastructure at scale. Previously Cisco Talos. Based in FL.">
+<meta property="og:image" content="https://richturiano.com/images/mANwK6Is8r1Rf4mmVZCs7Dqw2K8.jpg">
+<meta property="og:url" content="https://richturiano.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* ---------- Tokens ---------- */
+:root {
+  --paper: #F7F8F6;
+  --ink: #14324A;
+  --ink-soft: #5C6B76;
+  --rule: #D9DED8;
+  --link: #1F6F8B;
+  --measure: 62ch;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0F1B24;
+    --ink: #E6EBEE;
+    --ink-soft: #9AA9B3;
+    --rule: #26363F;
+    --link: #7FC4DA;
+  }
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: underline; text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+img { max-width: 100%; height: auto; display: block; }
+p { margin: 0 0 1em; max-width: var(--measure); }
+h1, h2, h3 { font-weight: 400; margin: 0; line-height: 1.15; }
+
+.page { max-width: 1040px; margin: 0 auto; padding: clamp(1.5rem, 5vw, 4rem) clamp(1.25rem, 5vw, 3rem) 5rem; }
+
+/* ---------- Header ---------- */
+.masthead { display: grid; grid-template-columns: auto 1fr; gap: clamp(1.25rem, 4vw, 2.5rem); align-items: end; padding-bottom: 2.5rem; }
+.masthead img { width: clamp(96px, 14vw, 150px); aspect-ratio: 5 / 6; object-fit: cover; border-radius: 6px; }
+.masthead h1 { font-size: clamp(2.5rem, 6.5vw, 4.5rem); letter-spacing: -0.015em; }
+.masthead .role { font-size: 1.25rem; color: var(--ink-soft); margin: 0.35rem 0 0; }
+.masthead .contact { margin-top: 1.1rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; }
+.masthead .contact a { color: var(--ink); }
+
+nav { border-top: 1px solid var(--rule); padding: 0.9rem 0; display: flex; flex-wrap: wrap; gap: 0.3rem 1.5rem; }
+nav a { color: var(--ink-soft); text-decoration: none; }
+nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ---------- Sections (CV rows) ---------- */
+section { display: grid; grid-template-columns: 9.5rem 1fr; gap: 1rem 2rem; border-top: 1px solid var(--rule); padding: 2.25rem 0; }
+section > h2 { font-size: 1rem; color: var(--ink-soft); padding-top: 0.25rem; }
+section > div { min-width: 0; }
+
+/* ---------- Entries ---------- */
+.entry { display: grid; grid-template-columns: 44px 1fr; gap: 1.1rem; margin-bottom: 2rem; }
+.entry:last-child { margin-bottom: 0; }
+.entry img { width: 44px; height: 44px; object-fit: contain; border-radius: 6px; }
+.entry h3 { font-size: 1.2rem; font-weight: 600; }
+.entry .meta { color: var(--ink-soft); margin: 0.2rem 0 0.7rem; }
+.entry p:last-child { margin-bottom: 0; }
+
+.project { margin-bottom: 2.5rem; }
+.project:last-child { margin-bottom: 0; }
+.project h3 { font-size: 1.2rem; font-weight: 600; }
+.project .meta { color: var(--ink-soft); margin: 0.2rem 0 0.9rem; }
+.project img { border-radius: 6px; border: 1px solid var(--rule); max-width: 640px; }
+
+.skills { line-height: 1.9; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 640px) {
+  .masthead { grid-template-columns: 1fr; align-items: start; }
+  section { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.75rem 0; }
+  .entry { grid-template-columns: 36px 1fr; gap: 0.85rem; }
+  .entry img { width: 36px; height: 36px; }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  :root { --paper: #fff; --ink: #000; --ink-soft: #444; --rule: #bbb; --link: #000; }
+  nav, .project img { display: none; }
+  .page { padding: 0; }
+  a { text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ============ HEADER: name, role, contact ============ -->
+  <header class="masthead" id="top">
+    <img src="images/VXJpBIgOsTdAKmOntCeN6C3tMbo.jpg" alt="Richie Turiano">
+    <div>
+      <h1>Richie Turiano</h1>
+      <p class="role">Production AI &amp; ML engineer — backend, data, and AI/ML systems. Florida.</p>
+      <div class="contact">
+        <a href="mailto:richturiano@runbox.com">richturiano@runbox.com</a>
+        <a href="https://www.linkedin.com/in/rich-turiano/">LinkedIn</a>
+        <a href="https://github.com/kiwis0/">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Sections">
+    <a href="#intro">Intro</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certification">Certification</a>
+    <a href="#skills">Skills</a>
+  </nav>
+
+  <!-- ============ INTRO ============ -->
+  <section id="intro">
+    <h2>Intro</h2>
+    <div>
+      <p>I'm Richie Turiano, a production AI engineer based in Florida. I build and deploy machine learning, LLM, and data systems that hold up at enterprise scale: from NLP and threat-detection pipelines to MLOps infrastructure and full-stack cloud platforms.</p>
+      <p>Over 5+ years at Cisco's Talos Intelligence and beyond, I've focused on the engineering that turns AI research into reliable, customer-facing software: fine-tuning models, structuring sensitive training data, and shipping services that stay up. I hold a B.S. in Computer Science &amp; Philosophy from Rensselaer Polytechnic Institute.</p>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div>
+
+      <article class="project">
+        <h3><a href="https://github.com/kiwis0/blacks-law-rag">RAG Knowledge Assistant</a></h3>
+        <p class="meta">AI / LLM systems. Solo project, January 2025.</p>
+        <!-- Add a one- or two-sentence description of the project here if you want one. -->
+        <img src="images/mHlEbEQF3UyQWgs0FJCOuDMMzIw.png" alt="RAG Knowledge Assistant screenshot" loading="lazy">
+      </article>
+
+      <article class="project">
+        <h3><a href="https://github.com/kiwis0/sonar-agent-swarm">Sonar Agent Swarm</a></h3>
+        <p class="meta">Agentic systems / DevTools. Solo project, March 2025.</p>
+        <!-- Add a one- or two-sentence description of the project here if you want one. -->
+        <img src="images/f5PaPHIAmX69ny8FyLaZkU9Ag.png" alt="Sonar Agent Swarm screenshot" loading="lazy">
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div>
+
+      <!-- To add a new role, copy one <article class="entry"> block and paste it at the top. -->
+
+      <article class="entry">
+        <img src="images/PnCJZAvxlcHg3v4uyMDH63YBRzo.png" alt="" loading="lazy">
+        <div>
+          <h3>Data Analytics Engineer</h3>
+          <p class="meta">Louisiana-Pacific, Nashville, TN. July 2025 – December 2025.</p>
+          <p>Engineered Python, Snowflake, and dbt pipelines integrating Salesforce data into a medallion architecture, replacing manual quarterly reporting and saving 40+ hours per cycle through real-time analytics and Tableau dashboards.</p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <img src="images/ph5xqSioKrNYq47eciIE2L5IY.png" alt="" loading="lazy">
+        <div>
+          <h3>Machine Learning Engineer — NLP &amp; Data Systems</h3>
+          <p class="meta">Cisco Talos, remote. January 2022 – May 2025.</p>
+          <p>Developed and fine-tuned NLP and LLM-based classification pipelines (PyTorch, Hugging Face, BERT, LLaMA) that reduced false positives by 20%, and operationalized ML deployment with Kubeflow, MLflow, and Databricks.</p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <img src="images/r4wsZyOLMYGpcYgRP7EFkk47IGo.webp" alt="" loading="lazy">
+        <div>
+          <h3>DevOps / Full Stack Software Engineer</h3>
+          <p class="meta">Cisco Systems, CX Platform, remote. July 2020 – January 2022.</p>
+          <p>Built TypeScript/React dashboards and Python/SQL ETL services that lifted user engagement by 20%, integrating cloud-native infrastructure across Kubernetes, Terraform, and AWS for globally distributed teams.</p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <img src="images/iPL5bITx5FdZKJJ1250rDho401g.png" alt="" loading="lazy">
+        <div>
+          <h3>Data Engineering Intern</h3>
+          <p class="meta">BoostedAI, New York, NY. June 2019 – September 2019.</p>
+          <p>Built a data pipeline from scratch to ingest and process external FRED economic data using Python APIs and Pandas, delivering clean, analysis-ready datasets for downstream modeling and research workflows.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education">
+    <h2>Education</h2>
+    <div>
+      <article class="entry">
+        <img src="images/DK73tZ0tamv3yTmB12fL0ktQDM.png" alt="" loading="lazy">
+        <div>
+          <h3>Bachelor of Science in Computer Science &amp; Philosophy</h3>
+          <p class="meta">Rensselaer Polytechnic Institute, Troy, NY. September 2016 – May 2020.</p>
+          <p>Coursework spanned machine learning fundamentals, linear algebra, bioinformatics, and big data systems — including building transformer architectures from scratch based on the "Attention Is All You Need" paper, applied to protein structure prediction in the style of AlphaFold. Complemented by advanced study in AI ethics, philosophy of mind, and the history of democratic thought.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATION ============ -->
+  <section id="certification">
+    <h2>Certification</h2>
+    <div>
+      <article class="entry">
+        <img src="images/7SYDmjJW80Mc3OfJLlC1joNTU.png" alt="" loading="lazy">
+        <div>
+          <h3>Generative AI with Large Language Models</h3>
+          <p class="meta">Issued 2025.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div>
+      <p class="skills">Python, PyTorch, Hugging Face, LLMs, SQL, Jupyter, Databricks, Spark, Snowflake, AWS, EKS, Kubernetes, Terraform, Docker, TypeScript, Git, CI/CD, Agile.</p>
+      <p class="skills">Languages: English.</p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div>
+      <p><a href="mailto:richturiano@runbox.com">richturiano@runbox.com</a></p>
+      <p><a href="https://www.linkedin.com/in/rich-turiano/">linkedin.com/in/rich-turiano</a></p>
+      <p><a href="https://github.com/kiwis0/">github.com/kiwis0</a></p>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
